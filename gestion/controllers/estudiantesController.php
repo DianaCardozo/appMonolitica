@@ -60,5 +60,20 @@ class EstudianteController extends BaseController
         $conexiondb->close();
         return $resultadoSQL;
     }
+    function readRow($codigo)
+    {
+        $sql = 'select * from estudiantes';
+        $sql .= ' where codigo=' . $codigo;
+        $conexiondb = new ConexionDbController();
+        $resultadoSQL = $conexiondb->execSQL($sql);
+        $estudiante = new Estudiante();
+        while ($registro = $resultadoSQL->fetch_assoc()) {
+            $estudiante->setCodigo($registro['codigo']);
+            $estudiante->setNombres($registro['nombres']);
+            $estudiante->setApellidos($registro['apellidos']);
+        }
+        $conexiondb->close();
+        return $estudiante;
+    }
 
 }
