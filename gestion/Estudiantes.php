@@ -37,7 +37,7 @@ $estudiantes = $estudianteController->read();
                     echo '  <td>' . $estudiante->getApellidos() . '</td>';
                     echo '  <td>';
                     echo '      <a>MODIFICAR</a>';
-                    echo '      <a>BORRAR</a>';
+                    echo '      <a  href="views/accion_borrar_estudiante.php?codigo=' . $estudiante->getCodigo() . '" >BORRAR</a>';
                     echo '  </td>';
                     echo '</tr>';
                 }
