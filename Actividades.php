@@ -18,7 +18,7 @@ $actividadController = new actividadController();
 $codigoEstudiante = $_GET['codigo'];
 $codigo = $codigoEstudiante;
 $actividades = $actividadController->read($codigoEstudiante);
-$urlAction = "views/Actividades/form_actividad.php?codigo=".$codigoEstudiante;
+$urlAction = "gestion/views/Actividades/form_actividad.php?codigo=".$codigoEstudiante;
 $estudiante = new Estudiante();
 $estudiante = $estudianteController->readRow($codigo);
 ?>
