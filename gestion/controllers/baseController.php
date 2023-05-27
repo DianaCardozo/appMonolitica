@@ -11,4 +11,9 @@ abstract class BaseController
     abstract function readRow($codigo);
 }
 
-
+abstract class BaseControllerActividad
+{
+    abstract function create($model);
+    abstract function read($codigoEstudiante);
+    abstract function update($id,$model);
+}
