@@ -1,8 +1,8 @@
 <?php
-require 'models/estudiante.php';
-require 'controllers/conexionDbController.php';
-require 'controllers/baseController.php';
-require 'controllers/estudiantesController.php';
+require 'gestion/models/estudiante.php';
+require 'gestion/controllers/conexionDbController.php';
+require 'gestion/controllers/baseController.php';
+require 'gestion/controllers/estudiantesController.php';
 
 use estudianteController\EstudianteController;
 
@@ -19,7 +19,7 @@ $estudiantes = $estudianteController->read();
 <body>
     <main>
         <h1>Lista de estudiantes</h1>
-        <a href="views/form_estudiante.php">Registrar estudiante</a>
+        <a href="views/Estudiantes/form_estudiante.php">Registrar estudiante</a>
         <table>
             <thead>
                 <tr>
@@ -36,8 +36,8 @@ $estudiantes = $estudianteController->read();
                     echo '  <td>' . $estudiante->getNombres() . '</td>';
                     echo '  <td>' . $estudiante->getApellidos() . '</td>';
                     echo '  <td>';
-                    echo '      <a  href="views/form_estudiante.php?codigo=' . $estudiante->getCodigo() . '">MODIFICAR</a>';
-                    echo '      <a  href="views/accion_borrar_estudiante.php?codigo=' . $estudiante->getCodigo() . '" >BORRAR</a>';
+                    echo '      <a  href="views/Estudiantes/form_estudiante.php?codigo=' . $estudiante->getCodigo() . '">MODIFICAR</a>';
+                    echo '      <a  href="views/Estudiantes/accion_borrar_estudiante.php?codigo=' . $estudiante->getCodigo() . '" >BORRAR</a>';
                     echo '  </td>';
                     echo '</tr>';
                 }
