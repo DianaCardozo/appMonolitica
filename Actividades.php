@@ -1,11 +1,11 @@
 <?php
 
-require 'models/actividad.php';
-require 'models/estudiante.php';
-require 'controllers/conexionDbController.php';
-require 'controllers/baseController.php';
-require 'controllers/actividadController.php';
-require 'controllers/estudiantesController.php';
+require 'gestion/models/actividad.php';
+require 'gestion/models/estudiante.php';
+require 'gestion/controllers/conexionDbController.php';
+require 'gestion/controllers/baseController.php';
+require 'gestion/controllers/actividadController.php';
+require 'gestion/controllers/estudiantesController.php';
 
 use estudianteController\EstudianteController;
 $estudianteController = new EstudianteController();
@@ -29,9 +29,6 @@ $estudiante = $estudianteController->readRow($codigo);
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="views/CSS/stylesTablas.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Alfa+Slab+One&family=Oswald:wght@200&family=Russo+One&display=swap');
-    </style>
 </head>
 
 <body>
@@ -75,10 +72,10 @@ $estudiante = $estudianteController->readRow($codigo);
                     echo '  <td type = "number" step = "0.1" class = "texto">' . $actividad->getNota() . '</td>';
                     echo '  <td class = "texto">' . $actividad->getCodigoEstudiante() . '</td>';
                     echo '  <td>';
-                    echo '      <a href="views/Actividades/form_actividad.php?id=' . $actividad->getId() . '&codigo= '. $codigoEstudiante .'">MODIFICAR</a>';
+                    echo '      <a>MODIFICAR</a>';
                     echo '  </td>';
                     echo '  <td>';
-                    echo '      <a href="views/Actividades/accion_borrar_actividad.php?id=' . $actividad->getId() . '&codigo= '. $codigoEstudiante .'">BORRAR</a>';
+                    echo '      <a>BORRAR</a>';
                     echo '  </td>';
                     echo '</tr>';
                 }
