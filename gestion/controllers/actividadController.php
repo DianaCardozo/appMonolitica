@@ -66,4 +66,20 @@ class ActividadController extends BaseControllerActividad
         return $resultadoSQL;
     }
 
+    function readRow($id)
+    {
+        $sql = 'select * from actividades';
+        $sql .= ' where id=' . $id;
+        $conexiondb = new ConexionDbController();
+        $resultadoSQL = $conexiondb->execSQL($sql);
+        $actividad = new Actividad();
+        while ($registro = $resultadoSQL->fetch_assoc()) {
+            $actividad->setid($registro['id']);
+            $actividad->setdescripcion($registro['descripcion']);
+            $actividad->setnota($registro['nota']);
+        }
+        $conexiondb->close();
+        return $actividad;
+    }
+
 }

@@ -4,18 +4,27 @@ require '../../controllers/conexionDbController.php';
 require '../../controllers/baseController.php';
 require '../../controllers/actividadController.php';
 
+use actividad\Actividad;
 use actividadController\ActividadController;
 
+$id = $_GET['id'];
 $codigo = $_GET['codigo'];
+$actividad = new Actividad();
+$actividad->setid($id);
+$actividad->setDescripcion($_POST['descripcion']);
+$actividad->setNota($_POST['nota']);
+$actividad->setCodigoEstudiante($codigo);
+
 $actividadController = new ActividadController();
-$resultado = $actividadController->delete($_GET['id']);
+$resultado = $actividadController->update($actividad->getId(), $actividad);
 if ($resultado) {
-    $mensaje = 'ACTIVIDAD BORRADA';
+    $mensaje = 'ACTIVIDAD MODIFICADA';
 } else {
-    $mensaje = 'NO SE PUDO BORRAR LA ACTIVIDAD';
+    $mensaje = 'NO SE PUDO MODIFICAR LA ACTIVIDAD';
 }
 $url = '../../../Actividades.php?codigo='.$codigo;
 ?>
+<br>
 <!DOCTYPE html>
 <html lang="en">
 <head>

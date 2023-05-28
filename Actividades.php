@@ -70,7 +70,7 @@ $estudiante = $estudianteController->readRow($codigo);
                     echo '  <td class = "texto">' . $actividad->getDescripcion() . '</td>';
                     echo '  <td type = "number" step = "0.1" class = "texto">' . $actividad->getNota() . '</td>';
                     echo '  <td>';
-                    echo '      <a>MODIFICAR</a>';
+                    echo '      <a href="gestion/views/Actividades/form_actividad.php?id=' . $actividad->getId() . '&codigo= '. $codigoEstudiante .'">MODIFICAR</a>';
                     echo '  </td>';
                     echo '  <td>';
                     echo '      <a href="gestion/views/Actividades/accion_borrar_actividad.php?id=' . $actividad->getId() . '&codigo= '. $codigoEstudiante .'">BORRAR</a>';

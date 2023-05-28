@@ -17,4 +17,5 @@ abstract class BaseControllerActividad
     abstract function read($codigoEstudiante);
     abstract function update($id,$model);
     abstract function delete($id);
+    abstract function readRow($id);
 }
