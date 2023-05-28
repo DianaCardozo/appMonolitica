@@ -64,6 +64,7 @@ $estudiante = $estudianteController->readRow($codigo);
             </thead>
             <tbody>
                 <?php
+                $sumatoria = 0.0;
                 foreach ($actividades as $actividad) {
                     echo '<tr>';
                     echo '  <td class = "texto">' . $actividad->getId() . '</td>';
@@ -76,10 +77,27 @@ $estudiante = $estudianteController->readRow($codigo);
                     echo '      <a href="gestion/views/Actividades/accion_borrar_actividad.php?id=' . $actividad->getId() . '&codigo= '. $codigoEstudiante .'">BORRAR</a>';
                     echo '  </td>';
                     echo '</tr>';
+                    $sumatoria += $actividad->getNota(); 
+                }
+                $mensaje = "No hay notas";
+                $menPromedio = "0.0";
+                if(!empty($sumatoria)){
+                $promedio = $sumatoria/count($actividades);
+                if($promedio < 3){
+                    $mensaje = "Lo sentimos esta perdiendo la materia con ";
+                    $menPromedio = '<h2 id = "perdio">'.$promedio.'</h2>';
+                }else {
+                    $mensaje = "Felicidades esta pasando la materia con ";
+                    $menPromedio = '<h2 id = "paso">'.$promedio.'</h2>';
+                }
                 }
                 ?>
             </tbody>
         </table>
+        <div>
+            <h2 id = "mensaje"><?php echo($mensaje)?></h2>
+            <h2><?php echo($menPromedio)?></h2>
+        </div>
         <a class = "registrar" href="index.php">VOLVER A LA LISTA DE ESTUDIANTES</a>
     </main>
 </body>

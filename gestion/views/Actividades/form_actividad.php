@@ -37,12 +37,6 @@ if (!empty($id)) {
         <form action = "<?php echo $urlAction;?>" method="post">
             <br>
             <label>
-                <span>Id:</span>
-                <br>
-                <input type="number" name="id" class="input" min="1" value ="<?php echo $actividad->getId(); ?>" required>
-            </label>
-            <br>
-            <label>
                 <span>Descripcion</span>
                 <br>
                 <input type="text" name="descripcion" value="<?php echo $actividad->getDescripcion(); ?>" required>
@@ -56,7 +50,7 @@ if (!empty($id)) {
             <br>
             <button type="submit">Guardar</button>
         </form>
-    <a class = "registrar" href="../../index.php">VOLVER A LA LISTA DE ESTUDIANTES</a>
+    <a class = "registrar" href="../../../index.php">VOLVER A LA LISTA DE ESTUDIANTES</a>
     </main>
 </body>
 
