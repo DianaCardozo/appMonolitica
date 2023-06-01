@@ -1,0 +1,125 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+  }
+  
+  h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+  }
+  
+  main {
+    padding: 30px;
+  }
+
+  .registrar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    width: 25%;
+    padding: 12px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .registrar:hover{
+  background-color: #969696;
+  color: #333;
+  }
+    
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+    table-layout: fixed;
+  }
+  
+  table tr {
+    text-align: center;
+  }
+  
+  table th, table td {
+    width: auto;
+    padding: 20px;
+    text-align: left;
+  }
+  
+  table th {
+    background-color: #333;
+    color: #fff;
+    font-size: 20px;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  tbody a {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+    width: 90%;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  tbody a:hover {
+    background-color: #555;
+  }
+      
+  .texto{
+    font-size: 20px;
+    font-weight: 500;
+  }
+  
+  div {
+    max-width: 30%;
+    margin: 20px auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px; 
+  }
+  
+  h2 {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+  }
+  #mensaje{
+    background-color: #333;
+    color: #fff;
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 20px;
+  }
+  #perdio{
+    color: red;
+  }
+
+  #paso{
+    color: green;
+  }

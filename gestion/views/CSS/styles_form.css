@@ -1,0 +1,86 @@
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fff;
+    color: #333;
+    padding: 10px;
+    margin: 0;
+  }
+
+  h1 {
+    font-family: monospace;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+  }
+
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 3px;
+  }
+
+  main {
+    padding: 30px;
+  }
+  
+  form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  
+  input[type="text"],
+  input[type="number"] {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+
+   button {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  .registrar{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    display: block;
+    width: 25%;
+    padding: 12px;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .registrar:hover{
+  background-color: #969696;
+  color: #333;
+  }
+  

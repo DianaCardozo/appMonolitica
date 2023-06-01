@@ -1,8 +1,14 @@
 <?php
-require '../models/estudiante.php';
-require '../controllers/conexionDbController.php';
-require '../controllers/baseController.php';
-require '../controllers/estudiantesController.php';
+// require 'gestion/models/estudiante.php';
+// require 'gestion/controllers/conexionDbController.php';
+// require 'gestion/controllers/conexionDbController.php';
+// require 'gestion/controllers/baseController.php';
+// require 'gestion/controllers/estudiantesController.php';
+
+require '../../models/estudiante.php';
+require '../../controllers/conexionDbController.php';
+require '../../controllers/baseController.php';
+require '../../controllers/estudiantesController.php';
 
 use estudiante\Estudiante;
 use estudianteController\EstudianteController;
@@ -46,6 +52,6 @@ if (!empty($codigo)) {
         <br>
         <button type="submit">Guardar</button>
     </form>
+    <a href="../../../index.php">Volver al inicio</a>
 </body>
-
 </html>
