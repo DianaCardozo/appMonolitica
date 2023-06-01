@@ -28,7 +28,7 @@ $estudiante = $estudianteController->readRow($codigo);
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="views/CSS/stylesTablas.css">
+    <link rel="stylesheet" href="gestion/views/CSS/stylesTablas.css">
 </head>
 
 <body>
@@ -69,7 +69,7 @@ $estudiante = $estudianteController->readRow($codigo);
                     echo '<tr>';
                     echo '  <td class = "texto">' . $actividad->getId() . '</td>';
                     echo '  <td class = "texto">' . $actividad->getDescripcion() . '</td>';
-                    echo '  <td type = "number" step = "0.1" class = "texto">' . $actividad->getNota() . '</td>';
+                    echo '  <td type = "number" step = "0.01" class = "texto">' . $actividad->getNota() . '</td>';
                     echo '  <td>';
                     echo '      <a href="gestion/views/Actividades/form_actividad.php?id=' . $actividad->getId() . '&codigo= '. $codigoEstudiante .'">MODIFICAR</a>';
                     echo '  </td>';

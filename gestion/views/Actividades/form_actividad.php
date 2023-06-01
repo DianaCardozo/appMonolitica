@@ -45,7 +45,7 @@ if (!empty($id)) {
             <label>
                 <span>Nota:</span>
                 <br>
-                <input type="number" name="nota" value="<?php echo $actividad->getNota(); ?>" step = "0.1"required>
+                <input type="number" name="nota" class="input" placeholder="Ingrese nota" step="0.01" min="0" max="5" value ="<?php echo $actividad->getNota(); ?>" required>
             </label>
             <br>
             <button type="submit">Guardar</button>
