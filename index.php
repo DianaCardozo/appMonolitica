@@ -16,17 +16,22 @@ $estudiantes = $estudianteController->read();
     <meta charset="UTF-8">
     <title>Document</title>
     <link rel="stylesheet" href="gestion/views/CSS/stylesTablas.css">
+    <!-- <link rel="stylesheet" href="gestion/views/CSS/styles_accion.css"> -->
+  
 </head>
 <body>
     <main>
+    <header>
         <h1>Lista de estudiantes</h1>
-        <a href="gestion/views/Estudiantes/form_estudiante.php">Registrar estudiante</a>
+    </header>
+        <a href="gestion/views/Estudiantes/form_estudiante.php"class="registrar">Registrar estudiante</a>
         <table>
             <thead>
                 <tr>
                     <th>Codigo</th>
                     <th>Nombres</th>
                     <th>Apellidos</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -38,10 +43,11 @@ $estudiantes = $estudianteController->read();
                     echo '  <td>' . $estudiante->getApellidos() . '</td>';
                     echo '  <td>';
                     echo '      <a  href="gestion/views/Estudiantes/form_estudiante.php?codigo=' . $estudiante->getCodigo() . '">MODIFICAR</a>';
+                    echo '<br>';
                     echo '      <a  href="gestion/views/Estudiantes/accion_borrar_estudiante.php?codigo=' . $estudiante->getCodigo() . '" >BORRAR</a>';
-                    echo '  </td>';
-                    echo '  <td>';
+                    echo '<br>';
                     echo '      <a href = "Actividades.php?codigo=' . $estudiante->getCodigo() . '">NOTAS</a>'; 
+                    echo '<br>';
                     echo '  </td>';
                     echo '</tr>';
                 }
