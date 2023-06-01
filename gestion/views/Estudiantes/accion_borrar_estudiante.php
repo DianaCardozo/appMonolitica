@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <link rel="stylesheet"  href="../../CSS/style_accion.css">    
+    <link rel="stylesheet"  href="../../CSS/styles_accion.css">    
 </head>
 
 <?php
@@ -13,9 +13,9 @@ use estudianteController\EstudianteController;
 $estudianteController = new EstudianteController();
 $resultado = $estudianteController->delete($_GET['codigo']);
 if ($resultado) {
-    $mensaje= 'Estudiante registrado';
+    $mensaje= 'Estudiante eliminado';
 } else {
-    $mensaje= 'No se pudo registrar el estudiante';
+    $mensaje= 'No se pudo eliminar el estudiante';
 }
 ?>
 <!DOCTYPE html>

@@ -30,10 +30,13 @@ if (!empty($codigo)) {
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet"  href="../CSS/styles_form.css">  
 </head>
 
 <body>
+    <header>
     <h1><?php echo $titulo ?></h1>
+</header>
     <form action = "<?php echo $urlAction;?>" method="post">
         <label>
             <span>Codigo:</span>
@@ -52,6 +55,6 @@ if (!empty($codigo)) {
         <br>
         <button type="submit">Guardar</button>
     </form>
-    <a href="../../../index.php">Volver al inicio</a>
+    <a href="../../../index.php"class="registrar">Volver al inicio</a>
 </body>
 </html>

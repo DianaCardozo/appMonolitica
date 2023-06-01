@@ -1,3 +1,8 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet"  href="../../CSS/styles_accion.css">    
+</head>
+
 <?php
 require '../../models/estudiante.php';
 require '../../controllers/conexionDbController.php';
@@ -16,10 +21,20 @@ $estudiante->setApellidos($_POST['apellidos']);
 $estudianteController = new EstudianteController();
 $resultado = $estudianteController->update($estudiante->getCodigo(), $estudiante);
 if ($resultado) {
-    echo '<h1>estudiante modificado</h1>';
+    $mensaje= 'Estudiante modificado';
 } else {
-    echo '<h1>No se pudo modificar el estudiante</h1>';
+    $mensaje= 'No se pudo modificar el estudiante';
 }
 ?>
-<br>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borrar Estudiante</title>
+    <link rel="stylesheet" href="../CSS/styles_accion.css">
+</head>
+<header>
+        <h1><?php echo($mensaje) ?>
+</header>
+    <br>
 <a href="../../../index.php">Volver al inicio</a>
