@@ -70,7 +70,7 @@ body {
     color: #fff;
     font-size: 20px;
   }
-  
+
   tbody tr:nth-child(even) {
     background-color: #f2f2f2;
   }
